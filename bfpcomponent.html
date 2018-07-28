@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>A React Component</title>
+
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+  <script type="text/babel">
+    class SocialMediaSites extends React.Component {
+      render() {
+        return (
+          <div className="social-media-sites">
+            <h1>List of Social Media Sites</h1>
+              <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>LinkedIn</li>
+                <li>Pinterest</li>
+                <li>Instagram</li>
+                <li>Google +</li>
+                <li>YouTube</li>
+                <li>Tumblr</li>
+                <li>Flickr</li>
+                <li>Reddit</li>
+                <li>Snapchat</li>
+                <li>WhatsApp</li>
+                <li>Quora</li>
+              </ul>
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render (
+      <SocialMediaSites />, document.getElementById('root')
+    );
+  </script>
+</body>
+</html>
