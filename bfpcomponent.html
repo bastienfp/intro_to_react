@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My React Component</title>
+  </head>
+  <body>
+
+    <div id="app"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <script type="text/babel">
+
+      class SocialMediaSites extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            sites: [
+              { name: 'Facebook', createdDate: 1999},
+              { name: 'Twitter', createdDate: 2000},
+              { name: 'LinkedIn', createdDate: 2001},
+              { name: 'Pinterest', createdDate: 2002},
+              { name: 'Instagram', createdDate: 2003},
+              { name: 'Google +', createdDate: 2004},
+              { name: 'YouTube', createdDate: 2005},
+              { name: 'Tumblr', createdDate: 2006},
+              { name: 'Flickr', createdDate: 2007},
+              { name: 'Reddit', createdDate: 2008},
+              { name: 'Snapchat', createdDate: 2009},
+              { name: 'WhatsApp', createdDate: 2010},
+              { name: 'Quora', createdDate: 2011}
+            ]
+          }
+        }
+
+        render() {
+          return (
+            <div className="social-media-sites">
+              <h1>{this.props.title}</h1>
+                <ul>
+                  <li>{this.state.sites[0].name}</li>
+                  <li>{this.state.sites[1].name}</li>
+                  <li>{this.state.sites[2].name}</li>
+                  <li>{this.state.sites[3].name}</li>
+                  <li>{this.state.sites[4].name}</li>
+                  <li>{this.state.sites[5].name}</li>
+                  <li>{this.state.sites[6].name}</li>
+                  <li>{this.state.sites[7].name}</li>
+                  <li>{this.state.sites[8].name}</li>
+                  <li>{this.state.sites[9].name}</li>
+                  <li>{this.state.sites[10].name}</li>
+                  <li>{this.state.sites[11].name}</li>
+                  <li>{this.state.sites[12].name}</li>
+                </ul>
+            </div>
+          );
+        }
+      }
+
+      SocialMediaSites.defaultProps = {
+        title: "List of Social Media Sites (the props way)"
+      }
+
+      ReactDOM.render (
+        <SocialMediaSites />, document.getElementById('app')
+      );
+
+    </script>
+  </body>
+</html>
